@@ -133,7 +133,7 @@ const translations = {
 
         // Bio Section
         bioTitle: "Ваш лечащий врач",
-        bioText: "\"Ежедневное общение с пациентами — самая вдохновляющая часть моей работы. Я вижу истинную награду в том, чтобы превратить тревожный визит в позитивный опыт, показывая, насколько комфортным может быть лечение.\"",
+        bioText: "\"Ежедневное общение с пациентами — самая приятная часть моей работы. Я получаю истинное удовлетворение, превращая тревожные визиты в позитивные впечатления, показывая, насколько комфортным и честным может быть стоматологическое лечение.\"",
         bioAuthor: "— Доктор Азамат, Основатель и Главный стоматолог",
 
         // Services Section
@@ -263,7 +263,7 @@ window.handleLangChange = function (selectElement) {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    const savedLang = localStorage.getItem('selectedLanguage') || 'ru';
     const switcher = document.getElementById('lang-switcher');
     if (switcher) switcher.value = savedLang;
     changeLanguage(savedLang);
