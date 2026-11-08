@@ -7,9 +7,11 @@ const translations = {
         logo: "DR. AZAMAT | DENTAL CARE",
         lnkAbout: "About Us",
         lnkServices: "Services",
-        lnkInsurance: "Insurance",
         lnkContact: "Contact",
         btnCall: "📞 Call Now",
+
+        // Mobile Utilities Label
+        mLangLabel: "Select Language:",
 
         // Hero Section
         heroTag: "✨ Now Accepting New Patients",
@@ -20,7 +22,7 @@ const translations = {
         // Bio Section
         bioTitle: "Meet Your Dentist",
         bioText: "\"Connecting with my patients daily is the most fulfilling part of my work. I find true reward in transforming anxious visits into positive experiences by showing how comfortable and honest dental treatments can be.\"",
-        bioAuthor: "— Dr. Azamat, DDS",
+        bioAuthor: "— Dr. Azamat, Founder & Lead Dentist",
 
         // Services Section
         srvHeader: "Specialized Clinical Scope",
@@ -43,9 +45,9 @@ const translations = {
         ftCol1Title: "Our Office",
         ftAddress: "Amir Temur Ave, 129<br>Tashkent, Uzbekistan",
         ftCol2Title: "Office Hours",
-        ftHoursWeekday: "Mon - Thu: 7:30am - 4:30pm",
-        ftHoursFriday: "Fri: 7:30am - 2:00pm",
-        ftHoursWeekend: "Sat - Sun: Closed",
+        ftHoursWeekday: "Mon - Fri: 8:30am - 20:30pm",
+        ftHoursFriday: "Sat: 10:00am - 20:00pm",
+        ftHoursWeekend: "Sun: Closed",
         ftCol3Title: "Ready to Visit?",
         ftCtaDesc: "Drop us an email or give us a ring to secure your slot easily.",
         ftBtnEmail: "Email for Appointment",
@@ -63,9 +65,11 @@ const translations = {
         logo: "DR. AZAMAT | STOMATOLOGIYA",
         lnkAbout: "Biz haqimizda",
         lnkServices: "Xizmatlar",
-        lnkInsurance: "Sug'urta",
         lnkContact: "Aloqa",
         btnCall: "📞 Qo'ng'iroq",
+
+        // Mobile Utilities Label
+        mLangLabel: "Tilni tanlang:",
 
         // Hero Section
         heroTag: "✨ Yangi bemorlarni qabul qilamiz",
@@ -76,7 +80,7 @@ const translations = {
         // Bio Section
         bioTitle: "Shifokorimiz bilan tanishing",
         bioText: "\"Bemorlarim bilan har kuni muloqot qilish — ishimning eng quvonchli qismidir. Zamonaviy stomatologik muolajalar qanchalik qulay va shaffof bo'lishini ko'rsatish orqali xavotirli tashriflarni ijobiy tajribaga aylantirishdan mamnunman.\"",
-        bioAuthor: "— Dr. Azamat, Stomatolog",
+        bioAuthor: "— Dr. Azamat, Asoschi va Bosh Stomatolog",
 
         // Services Section
         srvHeader: "Ixtisoslashtirilgan klinik xizmatlar",
@@ -96,8 +100,8 @@ const translations = {
         ftCol1Title: "Bizning klinika",
         ftAddress: "Amir Temur shoh ko'chasi, 129-uy<br>Toshkent, O'zbekiston",
         ftCol2Title: "Ish vaqtlari",
-        ftHoursWeekday: "Dush - Pay: 7:30 - 16:30",
-        ftHoursFriday: "Jum: 7:30 - 14:00",
+        ftHoursWeekday: "Dush - Pay: 8:30 - 20:30",
+        ftHoursFriday: "Jum: 10:00 - 20:00",
         ftHoursWeekend: "Shan - Yak: Yopilgan",
         ftCol3Title: "Qabulga tayyormisiz?",
         ftCtaDesc: "Navbatingizni osongina band qilish uchun bizga elektron pochta yuboring yoki qo'ng'iroq qiling.",
@@ -115,9 +119,11 @@ const translations = {
         logo: "СТОМАТОЛОГИЯ | ДР. АЗАМАТА",
         lnkAbout: "О нас",
         lnkServices: "Услуги",
-        lnkInsurance: "Страхование",
         lnkContact: "Контакты",
         btnCall: "📞 Позвонить",
+
+        // Mobile Utilities Label
+        mLangLabel: "Выберите язык:",
 
         // Hero Section
         heroTag: "✨ Открыт прием новых пациентов",
@@ -128,7 +134,7 @@ const translations = {
         // Bio Section
         bioTitle: "Ваш лечащий врач",
         bioText: "\"Ежедневное общение с пациентами — самая вдохновляющая часть моей работы. Я вижу истинную награду в том, чтобы превратить тревожный визит в позитивный опыт, показывая, насколько комфортным может быть лечение.\"",
-        bioAuthor: "— Доктор Азамат, Стоматолог",
+        bioAuthor: "— Доктор Азамат, Основатель и Главный стоматолог",
 
         // Services Section
         srvHeader: "Специализированные клинические услуги",
@@ -148,9 +154,9 @@ const translations = {
         ftCol1Title: "Наша клиника",
         ftAddress: "Проспект Амира Темура, 129<br>г. Ташкент, Узбекистан",
         ftCol2Title: "График работы",
-        ftHoursWeekday: "Пн - Чт: 7:30 - 16:30",
-        ftHoursFriday: "Пт: 7:30 - 14:00",
-        ftHoursWeekend: "Сб - Вс: Выходной",
+        ftHoursWeekday: "Пн - Пт: 8:30 - 20:30",
+        ftHoursFriday: "Сб: 10:00 - 20:00",
+        ftHoursWeekend: "Вс: Выходной",
         ftCol3Title: "Готовы к визиту?",
         ftCtaDesc: "Напишите нам на почту или позвоните, чтобы быстро и легко записаться на прием.",
         ftBtnEmail: "Записаться по почте",
@@ -173,7 +179,6 @@ function changeLanguage(lang) {
         'nav-logo': 'logo',
         'lnk-about': 'lnkAbout',
         'lnk-services': 'lnkServices',
-        'lnk-insurance': 'lnkInsurance',
         'lnk-contact': 'lnkContact',
         'btn-call': 'btnCall',
         'hero-tag': 'heroTag',
@@ -195,9 +200,9 @@ function changeLanguage(lang) {
         //Mobile Menu Section
         'm-lnk-about': 'lnkAbout',
         'm-lnk-services': 'lnkServices',
-        'm-lnk-insurance': 'lnkInsurance',
         'm-lnk-contact': 'lnkContact',
         'm-btn-call': 'btnCall',
+        'm-lang-label': 'mLangLabel',
 
         // Core Services Section
         'srv-header': 'srvHeader',
@@ -275,28 +280,57 @@ window.addEventListener('DOMContentLoaded', () => {
     if (menuToggleBtn && mobileNavPanel) {
         menuToggleBtn.addEventListener('click', () => {
             const isHidden = mobileNavPanel.classList.contains('hidden');
-
+            
             if (isHidden) {
-                // Open Menu Panel
                 mobileNavPanel.classList.remove('hidden');
-                // Change icon design path to an "X" close mark
                 if (iconPath) iconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
             } else {
-                // Close Menu Panel
                 mobileNavPanel.classList.add('hidden');
-                // Revert icon design path back to standard hamburger lines
                 if (iconPath) iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
             }
         });
 
-        // Automatically close the mobile navigation menu when a user clicks on any link
+        // Auto close panel when links are selected
         const mobileLinks = mobileNavPanel.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                mobileNavPanel.classList.add('hidden');
+                mobileNavPanel.classList.add('hidden'); // Change md:hidden fallback instances if tracking rules crash
                 if (iconPath) iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
             });
         });
     }
 });
+
+
+/* ==========================================================================
+   SMOOTH SCROLL GLIDE INTERCEPTOR
+   ========================================================================== */
+window.addEventListener('DOMContentLoaded', () => {
+    // Intercept clicks on any link pointing to an anchor hash (e.g., #about, #contact)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+
+            // Skip empty links or placeholder anchors
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Prevent immediate structural jump
+                e.preventDefault();
+
+                // Glide down dynamically while leaving room for the sticky header
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
 
