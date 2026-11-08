@@ -3,10 +3,278 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Test page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Azamat | Modern & Honest Dentistry</title>
+
+    <link rel="icon" type="image/png" href="./tooth.png">
+
+    <!-- Tailwind CSS CDN for quick, clean styling without extra files -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Custom boutique palette inspired by Austin Dental Co */
+        :root {
+            --brand-dark: #1A2E3B;
+            /* Deep navy */
+            --brand-cream: #FDFBF7;
+            /* Off-white background */
+            --brand-accent: #D4AF37;
+            /* Elegant gold/bronze */
+        }
+
+        body {
+            background-color: var(--brand-cream);
+            color: var(--brand-dark);
+        }
+    </style>
 </head>
-<body>
-<h1>Title for test project</h1>
+
+<body class="font-sans antialiased">
+
+    <!-- RESPONSIBLE HEADER NAVIGATION WITH MOBILE HAMBURGER -->
+    <header class="sticky top-0 bg-[#1A2E3B] text-[#FDFBF7] shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <div class="text-xl font-bold tracking-wider" id="nav-logo">DR. AZAMAT | DENTAL CARE</div>
+
+            <!-- Desktop Only Navigation (Hidden on Mobile Screens) -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#about" id="lnk-about" class="hover:text-amber-400 transition">About Us</a>
+                <a href="#services" id="lnk-services" class="hover:text-amber-400 transition">Services</a>
+                <a href="#insurance" id="lnk-insurance" class="hover:text-amber-400 transition">Insurance</a>
+                <a href="#contact" id="lnk-contact" class="hover:text-amber-400 transition">Contact</a>
+            </nav>
+
+            <!-- Right-Side Utilities Header Grid -->
+            <div class="hidden md:flex items-center gap-4">
+                <select id="lang-switcher" onchange="handleLangChange(this)"
+                    class="bg-slate-700 text-white border border-slate-600 rounded px-2 py-1 text-sm outline-none cursor-pointer">
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="uz">🇺🇿 UZ</option>
+                    <option value="ru">🇷🇺 RU</option>
+                </select>
+                <a href="tel:+998909088549" id="btn-call"
+                    class="bg-amber-500 hover:bg-amber-600 text-slate-900 px-4 py-2 rounded font-bold text-sm transition">
+                    📞 Call Now
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle Button (Hidden on Desktops) -->
+            <button id="mobile-menu-toggle"
+                class="block md:hidden text-[#FDFBF7] hover:text-amber-400 focus:outline-none transition"
+                aria-label="Toggle Navigation Menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="hamburger-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Collapsible Mobile Menu Drawer Layout Panel (Toggled via JS) -->
+        <div id="mobile-nav-panel"
+            class="hidden md:hidden bg-[#1A2E3B] border-t border-slate-800 px-6 py-6 transition-all duration-300">
+            <nav class="flex flex-col space-y-4 font-medium mb-6">
+                <a href="#about" id="m-lnk-about" class="text-lg hover:text-amber-400 transition">About Us</a>
+                <a href="#services" id="m-lnk-services" class="text-lg hover:text-amber-400 transition">Services</a>
+                <a href="#insurance" id="m-lnk-insurance" class="text-lg hover:text-amber-400 transition">Insurance</a>
+                <a href="#contact" id="m-lnk-contact" class="text-lg hover:text-amber-400 transition">Contact</a>
+            </nav>
+            <div class="flex flex-col gap-4 border-t border-slate-800 pt-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-sm text-slate-400">Select Language:</span>
+                    <select id="mobile-lang-switcher" onchange="handleLangChange(this)"
+                        class="bg-slate-700 text-white border border-slate-600 rounded px-3 py-1.5 text-sm outline-none cursor-pointer">
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="uz">🇺🇿 UZ</option>
+                        <option value="ru">🇷🇺 RU</option>
+                    </select>
+                </div>
+                <a href="tel:+998901234567" id="m-btn-call"
+                    class="bg-amber-500 hover:bg-amber-600 text-slate-900 text-center py-3 rounded-xl font-bold transition">
+                    📞 Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO, BIO, AND SERVICES SECTIONS -->
+    <!-- (Include the main sections with matching IDs: #hero-tag, #hero-title, #hero-desc, #btn-book, #bio-title, #bio-text, #bio-author, #srv-header, #srv-sub, and #s1-title through #s3-desc as structured in the full template) -->
+
+    <section class="max-w-7xl mx-auto py-24 px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <span class="text-amber-600 font-bold uppercase tracking-widest text-sm" id="hero-tag">Now Accepting New
+                Patients</span>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mt-2 leading-tight" id="hero-title">
+                Exceptional Dental Care. <br>
+                <span>
+                    Transparently Delivered.
+                </span>
+            </h1>
+            <p class="mt-6 text-lg text-slate-600 max-w-md" id="hero-desc">
+                Our clinic offers a welcoming, judgment-free approach to your dental care.
+            </p>
+            <div class="mt-8 flex gap-4">
+                <a href="#contact" id="btn-book"
+                    class="bg-[#1A2E3B] text-white px-8 py-3 rounded font-semibold hover:bg-slate-800 transition">
+                    Request Appointment
+                </a>
+            </div>
+        </div>
+        <div class="h-96 w-full overflow-hidden rounded-2xl shadow-lg">
+            <img src="uzdnet-enterance.webp" class="h-full w-full object-cover" alt="Interior of the dental clinic">
+        </div>
+    </section>
+
+    <!-- CORE SERVICES SECTION -->
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold tracking-tight text-[#1A2E3B]" id="srv-header">
+                Specialized Clinical Scope</h2>
+            <p class="text-slate-500 mt-3 max-w-xl mx-auto text-sm md:text-base" id="srv-sub">Advanced surgical and
+                prosthetic treatments utilizing structural digital protocols.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Service 1: Implantology -->
+            <div
+                class="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-slate-100 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition-all duration-300">
+                <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-2xl mb-6">🦷</div>
+                <h3 class="text-xl font-bold mb-3 text-[#1A2E3B]" id="s1-title">Full-Arch Rehabilitation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" id="s1-desc">Surgical placement utilizing fixed,
+                    immediate-load protocols (All-on-4/6) to fully restore structural masticatory function and oral
+                    anatomy.</p>
+            </div>
+
+            <!-- Service 2: Prosthodontics -->
+            <div
+                class="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-slate-100 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition-all duration-300">
+                <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-2xl mb-6">✨</div>
+                <h3 class="text-xl font-bold mb-3 text-[#1A2E3B]" id="s2-title">Esthetic Prosthodontics</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" id="s2-desc">Micro-invasive cosmetic preparation for
+                    ceramic veneering, high-translucency zirconia crowns, and comprehensive digital smile designs.</p>
+            </div>
+
+            <!-- Service 3: Digital Mapping -->
+            <div
+                class="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-slate-100 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition-all duration-300">
+                <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-2xl mb-6">📸</div>
+                <h3 class="text-xl font-bold mb-3 text-[#1A2E3B]" id="s3-title">Digital Photo Protocols</h3>
+                <p class="text-slate-600 text-sm leading-relaxed" id="s3-desc">Systematic intraoral photography used for
+                    diagnostic precision, shade matching with dental laboratories, and tracking longitudinal treatment
+                    records.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSURANCE SIMPLIFIED COMPONENT -->
+    <!-- <section id="insurance" class="bg-[#1A2E3B] text-white py-16 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-serif font-bold mb-4">Insurance Made Simple</h2>
+            <p class="text-slate-300 mb-6">TBD</p>
+            <div class="flex flex-wrap justify-center gap-6 opacity-75 grayscale invert">
+                Drop simple, optimized image labels here later
+                <span class="px-4 py-2 border border-white/20 rounded">Toshent</span>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- YANDEX MAP EMBED COMPONENT -->
+    <section id="location-map" class="bg-white py-16 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-serif font-bold text-[#1A2E3B]" id="map-header">Our Location</h2>
+                <p class="text-slate-500 mt-2" id="map-sub">Find us easily in the center of Tashkent</p>
+            </div>
+
+            <!-- Responsive Map Wrapper Container -->
+            <div class="map-container" style="width: 100%; height: 450px;">
+                <iframe
+                    src="https://yandex.com/map-widget/v1/?ll=69.287552%2C41.354783&z=17&pt=69.287552,41.354783,pm2rdm"
+                    width="100%" height="100%" frameborder="0" allowfullscreen="true"
+                    style="position: relative; border: 0; border-radius: 8px;">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT & FOOTER -->
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-16 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 border-b border-slate-800 pb-12">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4" id="ft-col1-title">Our Office</h3>
+                <p class="text-sm leading-relaxed" id="ft-address">
+                    Amir Temur Ave, 129
+                    <br>
+                    Tashkent, Uzbekistan
+                </p>
+                <p class="mt-4 text-sm">
+                    <!-- <a href="mailto:info@yourclinic.com" class="hover:underline">info@yourclinic.com</a><br> -->
+                    <a href="tel:+998999088549" class="hover:underline font-bold text-white">(99) 908-85-49</a>
+                </p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4" id="ft-col2-title">Office Hours</h3>
+                <ul class="text-sm space-y-2.5">
+                    <li id="ft-hours-weekday"><span class="font-semibold text-slate-500">Mon - Thu:</span> 7:30am -
+                        4:30pm</li>
+                    <li id="ft-hours-friday"><span class="font-semibold text-slate-500">Fri:</span> 7:30am - 2:00pm</li>
+                    <li id="ft-hours-weekend"><span class="font-semibold text-slate-500">Sat - Sun:</span> Closed</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4" id="ft-col3-title">Ready to Visit?</h3>
+                <p class="text-sm text-slate-400 mb-5" id="ft-cta-desc">Drop us an email or give us a ring to secure
+                    your slot easily.
+                </p>
+                <a href="https://t.me/azmatmirzaolimovich"
+                    class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-2.5 rounded text-sm transition">
+                    Telegram for Appointment
+                </a>
+            </div>
+            <div class="mt-6 pt-6 border-t border-slate-800">
+                <p class="text-xs uppercase font-semibold text-slate-500 tracking-wider mb-3" id="ft-follow-text">Follow
+                    Us</p>
+                <div class="flex gap-4">
+                    <!-- Instagram Link -->
+                    <a href="https://instagram.com/dr_azamat_my" target="_blank" rel="noopener noreferrer"
+                        class="text-slate-400 hover:text-pink-500 transition-all duration-300 transform hover:scale-110"
+                        aria-label="Instagram">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                    <!-- YouTube Link -->
+                    <a href="https://instagram.com/dr_azamat_my" target="_blank" rel="noopener noreferrer"
+                        class="text-slate-400 hover:text-red-500 transition-all duration-300 transform hover:scale-110"
+                        aria-label="YouTube">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Bottom Bar -->
+        <div
+            class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-600 gap-4">
+            <p id="ft-copyright">&copy; 2026 Dr. Azamat | Dental Care. All Rights Reserved.</p>
+            <div class="flex gap-4 items-center">
+                <a href="#privacy" id="ft-privacy" class="hover:underline text-slate-500">Privacy Policy</a>
+                <span class="text-slate-800">|</span>
+                <p id="ft-hosting">Hosted beautifully & freely on GitHub Pages.</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./script.js"></script>
 
 </body>
+
 </html>
