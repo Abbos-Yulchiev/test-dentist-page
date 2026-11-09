@@ -307,20 +307,73 @@ function changeLanguage(lang) {
     if (mbSwitcher) mbSwitcher.value = lang;
 }
 
+/* ==========================================================================
+   GLOBAL HEADER ENGINE & RESPONSIVE INITIALIZER
+   ========================================================================== */
 window.addEventListener('DOMContentLoaded', () => {
     const headerContainer = document.getElementById('global-header');
     if (headerContainer) {
         fetch('header.html')
             .then(response => response.text())
             .then(html => {
+                // 1. Inject the header layout into the page placeholder
                 headerContainer.innerHTML = html;
-                // Re-trigger language engine so the newly injected header translates immediately
+
+                // 2. Trigger language translation loop so the new header translates instantly
                 const savedLang = localStorage.getItem('selectedLanguage') || 'ru';
                 changeLanguage(savedLang);
+
+                // ⚡ 3. WIRE UP THE HAMBURGER CLICKS IMMEDIATELY AFTER INJECTION:
+                initMobileMenu();
             });
     }
 });
 
+// Self-contained function to safely handle mobile toggle states
+function initMobileMenu() {
+    const menuToggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileNavPanel = document.getElementById('mobile-nav-panel');
+    const iconPath = document.getElementById('hamburger-icon-path');
+    const headerElement = document.getElementById('global-header');
+
+    // Self-contained toggle state engines
+    function openMenu() {
+        mobileNavPanel.classList.replace('grid-rows-[0fr]', 'grid-rows-[1fr]');
+        mobileNavPanel.classList.replace('opacity-0', 'opacity-100');
+        mobileNavPanel.classList.add('border-t'); // Smoothly bring back top divider border
+        if (iconPath) iconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+    }
+
+    function closeMenu() {
+        mobileNavPanel.classList.replace('grid-rows-[1fr]', 'grid-rows-[0fr]');
+        mobileNavPanel.classList.replace('opacity-100', 'opacity-0');
+        mobileNavPanel.classList.remove('border-t');
+        if (iconPath) iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+    }
+
+    if (menuToggleBtn && mobileNavPanel) {
+        menuToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileNavPanel.classList.contains('grid-rows-[1fr]');
+            if (isOpen) { closeMenu(); } else { openMenu(); }
+        });
+
+        window.addEventListener('click', (e) => {
+            if (headerElement && !headerElement.contains(e.target)) {
+                if (mobileNavPanel.classList.contains('grid-rows-[1fr]')) {
+                    closeMenu();
+                }
+            }
+        });
+
+        const mobileLinks = mobileNavPanel.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+    }
+}
 
 window.handleLangChange = function (selectElement) {
     changeLanguage(selectElement.value);
