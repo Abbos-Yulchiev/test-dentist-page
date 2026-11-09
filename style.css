@@ -1,0 +1,56 @@
+/* ==========================================================================
+   GLOBAL BRAND PALETTE & VARIABLES
+   ========================================================================== */
+:root {
+    --brand-dark: #1A2E3B;       /* Deep clinical navy */
+    --brand-cream: #FDFBF7;      /* Warm off-white background */
+    
+    /* 🎨 CHANGE THE ACCENT PREFERENCE ONCE HERE TO UPDATE THE ENTIRE SITE: */
+    --brand-accent: #20c8c6;     /* Vibrant Amber/Orange */
+    --brand-accent-hover: #0fe9e5;
+}
+
+/* Global Reset Rules */
+html {
+    scroll-behavior: smooth !important;
+}
+body {
+    background-color: var(--brand-cream);
+    color: var(--brand-dark);
+}
+
+header, #global-header, .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    
+    /* 🛡️ Explictly forces the header onto the absolute highest visual layer: */
+    z-index: 99999 !important; 
+    
+    /* Ensures background color is completely opaque so text underneath won't bleed through: */
+    background-color: var(--brand-dark) !important; 
+}
+
+/* ==========================================================================
+   REUSABLE CLINICAL UTILITY COMPONENTS
+   ========================================================================== */
+
+/* The Primary Accent Button (Call Now, Book, After labels) */
+.btn-accent {
+    background-color: var(--brand-accent) !important;
+    color: #0f172a !important; /* Slate 900 text for readability */
+    font-weight: 700 !important;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease !important;
+}
+.btn-accent:hover {
+    background-color: var(--brand-accent-hover) !important;
+}
+
+/* Text Element Branding Tones */
+.text-accent {
+    color: var(--brand-accent) !important;
+}
+
+/* Background Highlight accents (For things like the Accepting Patients badge) */
+.bg-accent-tint {
+    background-color: rgba(245, 158, 11, 0.1) !important; /* Transparent accent glow */
+}

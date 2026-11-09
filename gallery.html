@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Azamat | Smile Gallery & Photo Protocol</title>
+    <!-- Tailwind CSS CDN for quick, clean styling without extra files -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans antialiased">
+
+
+    <!-- Reusable Header Placeholder -->
+    <header id="global-header" class="sticky top-0 bg-[#1A2E3B] text-[#FDFBF7] shadow-md z-50"></header>
+
+
+    <!-- MAIN GALLERY SECTION -->
+    <main class="max-w-7xl mx-auto py-16 md:py-24 px-6">
+        <div class="text-center mb-16 space-y-3">
+            <span class="text-amber-600 font-bold uppercase tracking-widest text-xs md:text-sm block"
+                id="gal-tag">Digital Photo Protocols</span>
+            <h1 class="text-3xl md:text-5xl font-serif font-bold text-[#1A2E3B]" id="gal-header">Clinical Case Studies
+            </h1>
+            <p class="text-slate-500 max-w-xl mx-auto text-sm md:text-base" id="gal-sub">Authentic pre-operative and
+                post-operative documentations showing clinical success.</p>
+        </div>
+
+        <!-- Cases Layout Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <!-- CASE 1 CARD: Full Arch Rehabilitation -->
+            <div
+                class="bg-white p-6 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-slate-100 space-y-6">
+                <!-- Visual Before/After Split Block Container -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="relative rounded-2xl overflow-hidden bg-slate-100 aspect-[3/3]">
+                        <img src="./digital-protocols/Dr.Azamat.JPG" alt="Case 1 Before" class="w-full h-full object-cover"
+                            onerror="this.style.display='none';">
+                        <span
+                            class="absolute bottom-3 left-3 bg-black/60 text-white font-bold text-xs uppercase px-2.5 py-1 rounded-md tracking-wider">Before</span>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden bg-slate-100 aspect-[3/3]">
+                        <img src="./digital-protocols/IMG_4980.JPG" alt="Case 1 After" class="w-full h-full object-cover"
+                            onerror="this.style.display='none';">
+                        <span
+                            class="absolute bottom-3 left-3 bg-amber-500/90 text-slate-950 font-bold text-xs uppercase px-2.5 py-1 rounded-md tracking-wider">After</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#1A2E3B]" id="g-c1-title">Case #1: Full-Arch Rehabilitation</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed" id="g-c1-desc">Complete functional
+                        restoration of upper and lower jaw architecture using All-on-4 structural immediate-load
+                        protocols.</p>
+                </div>
+            </div>
+
+            <!-- CASE 2 CARD: Cosmetic Veneers -->
+            <div
+                class="bg-white p-6 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-slate-100 space-y-6">
+                <!-- Visual Before/After Split Block Container -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="relative rounded-2xl overflow-hidden bg-slate-100 aspect-[3/3]">
+                        <img src="./digital-protocols/IMG_4978.JPG" alt="Case 2 Before" class="w-full h-full object-cover"
+                            onerror="this.style.display='none';">
+                        <span
+                            class="absolute bottom-3 left-3 bg-black/60 text-white font-bold text-xs uppercase px-2.5 py-1 rounded-md tracking-wider">Before</span>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden bg-slate-100 aspect-[3/3]">
+                        <img src="./digital-protocols/IMG_4981.JPG" alt="Case 2 After" class="w-full h-full object-cover"
+                            onerror="this.style.display='none';">
+                        <span
+                            class="absolute bottom-3 left-3 bg-amber-500/90 text-slate-950 font-bold text-xs uppercase px-2.5 py-1 rounded-md tracking-wider">After</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#1A2E3B]" id="g-c2-title">Case #2: Esthetic Prosthodontics</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed" id="g-c2-desc">Aesthetic correction using
+                        high-translucency ceramic veneers to address tracking diastema, tooth discoloration, and minor
+                        structural misalignment.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- LINK EXTERNAL SYSTEM SCRIPT -->
+    <script src="./script.js"></script>
+    <script>
+        // Synchronize switcher ID on gallery load to hook directly into app.js master loop
+        window.addEventListener('DOMContentLoaded', () => {
+            const switcher = document.getElementById('gallery-lang-switcher');
+            const savedLang = localStorage.getItem('selectedLanguage') || 'ru';
+            if (switcher) switcher.value = savedLang;
+        });
+    </script>
+</body>
+
+</html>

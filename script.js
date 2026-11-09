@@ -14,7 +14,7 @@ const translations = {
         mLangLabel: "Select Language:",
 
         // Hero Section
-        heroTag: "✨ Now Accepting New Patients",
+        heroTag: "✨ Accepting Patients",
         heroTitle: "Exceptional Dental Care. <br><span>Transparently Delivered.</span>",
         heroDesc: "Our clinic offers a welcoming, judgment-free approach to your dental care. We focus on providing premium, state-of-the-art treatments in a relaxed, completely stress-free setting.",
         btnBook: "Request Appointment",
@@ -55,11 +55,23 @@ const translations = {
         ftHosting: "Hosted beautifully & freely on GitHub Pages.",
 
         ftFollow: "Follow Us",
+        ftTelegramContact: "Contact via telegram",
 
         // Rights and Privacy
         ftCopyright: "© 2026 Dr. Azamat | Dental Care. All Rights Reserved.",
         ftPrivacy: "Privacy Policy",
-        ftHosting: "Hosted beautifully & freely on GitHub Pages."
+        ftHosting: "Hosted beautifully & freely on GitHub Pages.",
+
+        // Gallery Section
+        lnkBack: "← Back to Main",
+        galTag: "Digital Photo Protocol",
+        galHeader: "Clinical Case Studies",
+        galSub: "Authentic pre-operative and post-operative documentations showing clinical success.",
+        gC1Title: "Case #1: Full-Arch Rehabilitation",
+        gC1Desc: "Complete functional restoration of upper and lower jaw architecture using All-on-4 structural immediate-load protocols.",
+        gC2Title: "Case #2: Esthetic Prosthodontics",
+        gC2Desc: "Aesthetic correction using high-translucency ceramic veneers to address tracking diastema, tooth discoloration, and minor structural misalignment."
+
     },
     uz: {
         logo: "DR. AZAMAT | STOMATOLOGIYA",
@@ -72,7 +84,7 @@ const translations = {
         mLangLabel: "Tilni tanlang:",
 
         // Hero Section
-        heroTag: "✨ Yangi bemorlarni qabul qilamiz",
+        heroTag: "✨ Bemorlarni qabul qilamiz",
         heroTitle: "A'lo darajadagi stomatologiya. <br><span>Shaffof yondashuv.</span>",
         heroDesc: "Klinikamiz sizning tish parvarishingizga mehmondo'st va cheklovsiz yondashuvni taklif etadi. Biz qulay va mutlaqo stressiz muhitda yuqori sifatli muolajalarni taqdim etishga e'tibor qaratamiz.",
         btnBook: "Qabulga yozilish",
@@ -109,11 +121,23 @@ const translations = {
         ftCopyright: "© 2026 Dr. Azamat | Barcha huquqlar himoyalangan.",
         ftHosting: "GitHub Pages platformasida bepul joylashtirilgan.",
         ftFollow: "Bizni kuzating",
+        ftTelegramContact: "Telegram orqaliy bog'laning",
 
         // Rights and Privacy
         ftCopyright: "© 2026 Dr. Azamat | Barcha huquqlar himoyalangan.",
         ftPrivacy: "Maxfiylik siyosati",
-        ftHosting: "GitHub Pages platformasida bepul joylashtirilgan."
+        ftHosting: "GitHub Pages platformasida bepul joylashtirilgan.",
+
+        // Gallery Section
+        lnkBack: "← Asosiy sahifaga qaytish",
+        galTag: "Raqamli foto-protokol",
+        galHeader: "Klinik holatlar galereyasi",
+        galSub: "Muolajalar muvaffaqiyatini ko'rsatuvchi haqiqiy va shaffof shifokorlik natijalari (tish operatsiyasidan oldin va keyin).",
+        gC1Title: "1-Holat: To'liq jag' reabilitatsiyasi",
+        gC1Desc: "All-on-4 tizimli tezkor yuklama protokollari yordamida yuqori va pastki jag' chaynash funksiyasini to'liq tiklash muolajasi.",
+        gC2Title: "2-Holat: Estetik ortopediya muolajalari",
+        gC2Desc: "Tishlar orasidagi masofa (diastema), rang o'zgarishi va mayda egriliklarni yuqori shaffoflikka ega keramik vinirlar bilan estetik tuzatish."
+
     },
     ru: {
         logo: "СТОМАТОЛОГИЯ | ДР. АЗАМАТА",
@@ -126,7 +150,7 @@ const translations = {
         mLangLabel: "Выберите язык:",
 
         // Hero Section
-        heroTag: "✨ Открыт прием новых пациентов",
+        heroTag: "✨ Принимаем пациентов",
         heroTitle: "Исключительная стоматология. <br><span>Честный подход.</span>",
         heroDesc: "Наша клиника предлагает доброжелательный подход к лечению зубов без лишних осуждений. Мы ориентируемся на предоставление высококлассных услуг в расслабляющей атмосфере.",
         btnBook: "Записаться на прием",
@@ -163,11 +187,23 @@ const translations = {
         ftCopyright: "© 2026 Доктор Азамат | Все права защищены.",
         ftHosting: "Сайт бесплатно размещен на GitHub Pages.",
         ftFollow: "Мы в соцсетях",
+        ftTelegramContact: "Связаться через Telegram",
 
         // Right and Privacy
         ftCopyright: "© 2026 Доктор Азамат | Все права защищены.",
         ftPrivacy: "Политика конфиденциальности",
-        ftHosting: "Сайт бесплатно размещен на GitHub Pages."
+        ftHosting: "Сайт бесплатно размещен на GitHub Pages.",
+
+        // Gallery Section
+        lnkBack: "← На главную",
+        galTag: "Цифровой фотопротокол",
+        galHeader: "Клинические случаи",
+        galSub: "Подлинная до- и послеоперационная документация, демонстрирующая успешные результаты лечения.",
+        gC1Title: "Случай #1: Тотальная реабилитация",
+        gC1Desc: "Полное функциональное восстановление архитектоники верхней и нижней челюстей с использованием хирургических протоколов немедленной нагрузки All-on-4.",
+        gC2Title: "Случай #2: Эстетическая ортопедия",
+        gC2Desc: "Эстетическая коррекция с использованием высокотранслюцентных керамических виниров для устранения диастемы, дисколорита и легких деформаций ряда."
+
     }
 };
 
@@ -231,11 +267,24 @@ function changeLanguage(lang) {
         'ft-copyright': 'ftCopyright',
         'ft-tracking-or-hosting': 'ftHosting', // (Will check and render matching ID safely)
         'ft-follow-text': 'ftFollow',
+        'ft-telegram-contact': 'ftTelegramContact',
 
         // Rights and Privacy
         'ft-copyright': 'ftCopyright',
         'ft-privacy': 'ftPrivacy',
-        'ft-hosting': 'ftHosting'
+        'ft-hosting': 'ftHosting',
+
+        // Gallery Section
+        'lnk-back': 'lnkBack',
+        'gal-tag': 'galTag',
+        'gal-header': 'galHeader',
+        'gal-sub': 'galSub',
+        'g-c1-title': 'gC1Title',
+        'g-c1-desc': 'gC1Desc',
+        'g-c2-title': 'gC2Title',
+        'g-c2-desc': 'gC2Desc',
+        'gallery-lang-switcher': 'void_sync'
+
     };
 
     for (const [id, key] of Object.entries(elementMap)) {
@@ -257,6 +306,21 @@ function changeLanguage(lang) {
     if (dsSwitcher) dsSwitcher.value = lang;
     if (mbSwitcher) mbSwitcher.value = lang;
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const headerContainer = document.getElementById('global-header');
+    if (headerContainer) {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                headerContainer.innerHTML = html;
+                // Re-trigger language engine so the newly injected header translates immediately
+                const savedLang = localStorage.getItem('selectedLanguage') || 'ru';
+                changeLanguage(savedLang);
+            });
+    }
+});
+
 
 window.handleLangChange = function (selectElement) {
     changeLanguage(selectElement.value);
@@ -280,7 +344,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (menuToggleBtn && mobileNavPanel) {
         menuToggleBtn.addEventListener('click', () => {
             const isHidden = mobileNavPanel.classList.contains('hidden');
-            
+
             if (isHidden) {
                 mobileNavPanel.classList.remove('hidden');
                 if (iconPath) iconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');

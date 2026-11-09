@@ -1,0 +1,68 @@
+<!-- OPTIMIZED FLEX-HEADER NAVIGATION WITH MOBILE HAMBURGER -->
+<!-- ULTRALIGHT & RESPONSIVE HIGH-BREAKPOINT HEADER -->
+<header class="sticky top-0 bg-[#1A2E3B] text-[#FDFBF7] shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center gap-4">
+
+        <!-- Brand Logo (Locks text layout, never overlaps) -->
+        <a href="index.html" id="nav-logo" class="hover:opacity-90 transition-opacity block">
+            DR. AZAMAT | DENTAL CARE
+        </a>
+
+        <!-- Desktop Navigation Menu links (Now safely hidden below 1024px) -->
+        <nav class="hidden lg:flex items-center space-x-6 lg:space-x-8 font-medium">
+            <a href="#about" id="lnk-about" class="hover:text-amber-400 transition whitespace-nowrap">About Us</a>
+            <a href="#services" id="lnk-services" class="hover:text-amber-400 transition whitespace-nowrap">Services</a>
+            <a href="#contact" id="lnk-contact" class="hover:text-amber-400 transition whitespace-nowrap">Contact</a>
+        </nav>
+
+        <!-- Right-Side Utilities Group (Hidden below 1024px to prevent overlapping) -->
+        <div class="hidden lg:flex items-center gap-4 shrink-0">
+            <label for="lang-switcher">Language</label><select id="lang-switcher" onchange="handleLangChange(this)"
+                class="bg-slate-700 text-white border border-slate-600 rounded px-2.5 py-1.5 text-sm outline-none cursor-pointer h-9 transition">
+                <option value="en">🇬🇧 EN</option>
+                <option value="uz">🇺🇿 UZ</option>
+                <option value="ru">🇷🇺 RU</option>
+            </select>
+            <a href="tel:+998901234567" id="btn-call"
+                class="inline-flex items-center justify-center px-4 py-1.5 h-9 rounded font-bold text-sm transition whitespace-nowrap btn-accent">
+                📞 Call Now
+            </a>
+        </div>
+
+        <!-- Mobile Hamburger Toggle Button (Now visible on ALL screens under 1024px) -->
+        <button id="mobile-menu-toggle"
+            class="block lg:hidden text-[#FDFBF7] hover:text-amber-400 focus:outline-none transition shrink-0 p-1"
+            aria-label="Toggle Navigation Menu">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="hamburger-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Collapsible Mobile Menu Drawer Layout Panel (Visible under 1024px) -->
+    <div id="mobile-nav-panel"
+        class="hidden lg:hidden bg-[#1A2E3B] border-t border-slate-800 px-6 py-6 transition-all duration-300">
+        <nav class="flex flex-col space-y-4 font-medium mb-6">
+            <a href="#about" id="m-lnk-about" class="text-lg hover:text-amber-400 transition">About Us</a>
+            <a href="#services" id="m-lnk-services" class="text-lg hover:text-amber-400 transition">Services</a>
+            <a href="#contact" id="m-lnk-contact" class="text-lg hover:text-amber-400 transition">Contact</a>
+        </nav>
+        <div class="flex flex-col gap-4 border-t border-slate-800 pt-4">
+            <div class="flex items-center justify-between">
+                <span class="text-sm text-slate-400" id="m-lang-label">Select Language:</span>
+                <label for="mobile-lang-switcher"></label><select id="mobile-lang-switcher"
+                    onchange="handleLangChange(this)"
+                    class="bg-slate-700 text-white border border-slate-600 rounded px-3 py-1.5 text-sm outline-none cursor-pointer">
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="uz">🇺🇿 UZ</option>
+                    <option value="ru">🇷🇺 RU</option>
+                </select>
+            </div>
+            <a href="tel:+998909088549" id="m-btn-call"
+                class="inline-flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-slate-900 text-center py-3 rounded-xl font-bold transition whitespace-nowrap">
+                📞 Call Now
+            </a>
+        </div>
+    </div>
+</header>
